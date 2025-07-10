@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Payment Gateway</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffdf9;
+      color: #000;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .icon-lock {
+      font-size: 1.5rem;
+      color: orange;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .notice {
+      background-color: #ffe0b2;
+      padding: 0.6rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .section-box {
+      background-color: #fff6ec;
+      border-radius: 14px;
+      padding: 0.8rem;
+    }
+    .payment-info {
+      background-color: #800000;
+      color: white;
+      padding: 0.7rem;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .payment-infoo {
+      background-color: red;
+      color: white;
+      padding: 0.7rem;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem; 
+    }
+    .ret {
+      text-align: center;
+      align-items: center;
+    }
+    .warning-box {
+      background-color: #ffcc8a;
+      padding: 0.6rem;
+      font-size: 0.8rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .submit-btn {
+      width: 100%;
+      margin-top: 1rem;
+      background-color: orange;
+      color: #4b0000;
+      font-size: 0.9rem;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .copy-icon, .info-icon {
+      font-size: 1rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .info-icon {
+      color: black;
+    }
+    .checkmark {
+      font-size: 1rem;
+    }
+    @media (max-width: 480px) {
+      h2 { font-size: 1rem; }
+      .notice, .payment-info, .warning-box { font-size: 0.8rem; }
+      .submit-btn { font-size: 0.85rem; padding: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon-lock">🔒</div>
+    <h2>Secured Payment Gateway</h2>
+
+    <div class="notice">
+      <span>Proceed to your bank app to complete this transaction</span>
+      <button class="info-icon" onclick="copyText('7063365160')" title="Copy Account Number"></button>
+    </div>
+
+    <div class="section-box">
+      <div class="payment-info">
+        <span id="acct-num">6100393400</span>
+        <button class="copy-icon" onclick="copyText('6100393400')" title="Copy Account Number">Click to copy📋</button>
+      </div>
+      <div class="payment-info">
+        <span id="bank-name">OPAY BANk</span>
+        <button class="copy-icon" onclick="copyText('Opay')" title="Copy Bank">Click to copy📋</button>
+      </div>
+      <div class="payment-info">
+        <span id="acct-name">IYENAM INNOCENT U.</span>
+        <button class="copy-icon" onclick="copyText('IYENAM INNOCENT U.')" title="Copy Name">Click to copy📋</button>
+      </div>
+
+      <div class="payment-infoo">
+        <p class="ret">ℹ️ Do not pay with OPAY BANK</p>
+      </div>
+
+      <div class="warning-box">
+        <span>Click on each to copy the account details, then proceed to your bank app to make the payment, when done, come back here and click the button below to confirm your payment, and get registered immediately.<br><br>Complete this payment before 1:00 Hour</span>
+        <span class="info-icon" title="Payment Deadline">ℹ️</span>
+      </div>
+    </div>
+
+    <a
+      class="submit-btn"
+      href="https://wa.me/2348071793403?text=Hello%20admin,%20I%20just%20made%20payment%20for%20nuvia%20registration%20on%20the%20payment%20web%20gateway."
+      target="_blank"
+    >
+      I have made the bank transfer ✔️
+    </a>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied: ' + text);
+      }).catch(err => {
+        alert('Failed to copy text');
+      });
+    }
+  </script>
+</body>
+</html>
